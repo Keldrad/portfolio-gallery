@@ -1,11 +1,9 @@
 .hero {
-  /* display: flex; */
   position: relative;
   margin-bottom: 50px;
   min-height: 355px;
   overflow: hidden;
 }
-
 
 .hero__slider {
   position: absolute;
@@ -23,25 +21,20 @@
 }
 
 .swiper-slide_slide1 {
-  background-image: url('/img/banner/320/birmingham-museums-trust-1.jpg');
+  background-image: url('../img/banner/320/birmingham-museums-trust-1.jpg');
 }
 
 .swiper-slide_slide2 {
-  background-image: url('/img/banner/320/birmingham-museums-trust-2.jpg');
+  background-image: url('../img/banner/320/birmingham-museums-trust-2.jpg');
 }
 
 .swiper-slide_slide3 {
-  background-image: url('/img/banner/320/birmingham-museums-trust-3.jpg');
+  background-image: url('../img/banner/320/birmingham-museums-trust-3.jpg');
 }
 
 .hero__content {
   margin-bottom: 0;
   position: relative;
-  /* top: 0; */
-  /* left: 0; */
-  /* right: 0; */
-  /* bottom: 0; */
-  /* height: 100%; */
   padding: 78px 10px 105px;
   z-index: 1;
 }
@@ -77,7 +70,6 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
-  /* text-align: center; */
   color: var(--text-alt);
   outline: 3px solid transparent;
   transition-property: outline, background-color, outline-offset;

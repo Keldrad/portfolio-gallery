@@ -16,6 +16,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-padding-top: 45px;
   scroll-behavior: smooth;
 }
 
@@ -31,7 +32,7 @@ html {
 
 h1, h2, h3, h4, h5, h6, p, ul, figure {
   margin: 0;
-} 
+}
 
 a {
   color: inherit;
@@ -43,7 +44,6 @@ img {
 }
 
 body {
-  /* position: relative; */
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -69,7 +69,6 @@ body {
   margin-bottom: var(--vertical-margin);
 }
 
-/* базовый стиль ссылок */
 .link {
   position: relative;
   box-sizing: content-box;
@@ -92,7 +91,6 @@ body {
   transition: opacity .4s ease-in-out;
 }
 
-/* покраска текста */
 .link:hover:not(:focus-visible) {
   color: var(--link-hover);
 }
@@ -105,14 +103,10 @@ body {
   color: var(--purp-active);
 }
 
-/* покраска фона */
 .link:focus-visible::before {
   opacity: 1;
 }
 
-
-
-/* для кнопки входа. покраска вложенного рисунка */
 .link path {
   transition-property: fill;
   transition-duration: 0.2s;
@@ -126,8 +120,6 @@ body {
 .link:active path{
   fill: var(--purp-active);
 }
-
-/* ========================================== */
 
 .title {
   margin-bottom: 12px;

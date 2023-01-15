@@ -41,7 +41,6 @@
   transition-duration: .2s;
 }
 
-
 .social__link:hover path,
 .social__link:focus-visible path{
   fill: white;

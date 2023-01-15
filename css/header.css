@@ -82,10 +82,8 @@
   vertical-align: middle;
 }
 
-
 /* header navigation  ==================================================================================  */
 .header-navigation {
-  /* display: none; */
   position: fixed;
   overflow-y: scroll;
   top: 0;
@@ -96,7 +94,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   opacity: 0;
   transform: translateX(-30%) scaleX(0);
   transform-origin: left;
@@ -120,15 +117,11 @@
 }
 
 .header-navigation_visible {
-  /* display: flex; */
   opacity: 1;
   transform: translateX(0) scaleX(1);
   background-color: rgba(0, 0, 0, .9);
 }
 
-
-
-/* header button  ==================================================================================  */
 .header__enter-button {
   display: flex;
   align-items: center;
@@ -151,9 +144,6 @@
   margin-right: 4px;
 }
 
-
-
-/* header search  ==================================================================================  */
 .header__search {
   position: absolute;
   width: 100vw;
@@ -180,7 +170,6 @@ input.header__search-input::placeholder {
 
 .header__search-btn,
 .header__search-close-btn {
-  /* position: relative; */
   position: absolute;
   right: 0px;
   top: calc(50% - var(--svg-height)/2);
@@ -243,7 +232,6 @@ input.header__search-input::placeholder {
   color: rgba(0, 0, 0, 0);
 }
 
-
 /* header down  ==================================================================================  */
 /* основные настройки разделов header'а в файле media_1920.css */
 .header-down {
@@ -253,4 +241,3 @@ input.header__search-input::placeholder {
 .header-down__item {
   background: transparent;
 }
-

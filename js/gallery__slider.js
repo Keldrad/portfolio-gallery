@@ -1,11 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
-
-// gallery slider ====================================================
   const gallerySlider = new Swiper('.gallery__swiper', {
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // },
     navigation: {
       prevEl: '.gallery__button-prev',
       nextEl: '.gallery__button-next',
@@ -26,9 +20,7 @@ document.addEventListener('DOMContentLoaded', function(){
       prevSlideMessage: 'Предыдущий слайд',
       nextSlideMessage: 'Следующий слайд',
     },
-    // Responsive breakpoints
     breakpoints: {
-      // when window width is >= 768px
       768: {
         slidesPerView: 2,
         slidesPerGroup: 2,
@@ -39,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function(){
         slidesPerGroup: 2,
         spaceBetween: 36
       },
-      // when window width is >= 1700px
       1600: {
         allowTouchMove: false,
         slidesPerView: 3,

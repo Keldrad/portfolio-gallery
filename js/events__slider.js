@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function(){
-
   const eventsSlider = new Swiper('.events__slider', {
     navigation: {
       nextEl: '.events__swiper-button-next',
@@ -16,14 +15,14 @@ document.addEventListener('DOMContentLoaded', function(){
     },
     loop: false,
     allowTouchMove: true,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 20,
     breakpoints: {
       320: {
-      slidesPerView: 1,
-      slidesPerView: 1,
-      spaceBetween: 34
+        spaceBetween: 34,
       },
       577: {
-        // allowTouchMove: true,
         slidesPerView: 2,
         slidesPerGroup: 2,
         spaceBetween: 34,
@@ -34,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function(){
         spaceBetween: 27
       },
       1600: {
-        allowTouchMove: false,
         slidesPerView: 3,
         slidesPerGroup: 3,
         spaceBetween: 50

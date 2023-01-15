@@ -1,7 +1,6 @@
 .gallery {
   position: relative;
-  /* overflow-y: scroll; */
-  background-image: url('/img/gallery/320/birmingham-museums-trust-4.jpg');
+  background-image: url('../img/gallery/320/birmingham-museums-trust-4.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -15,13 +14,10 @@
   min-width: 0;
   padding-top: 50px;
   padding-bottom: 43px;
-
 }
-
 
 /* filter ================================================================================ */
 .gallery-filter {
-  /* margin-bottom: 30px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -44,12 +40,6 @@
   line-height: 32px;
   color: var(--text-alt);
 }
-
-
-/* select ================================================ */
-/* ===> настройки select'a в файле gallery__select.css  <=== */
-
-
 
 /* checkbox ================================================ */
 .checkboxes-group {
@@ -85,7 +75,6 @@
   position: absolute;
   left: 0;
   top: 5px;
-  /* margin-right: 12px; */
   display: inline-block;
   width: 12px;
   height: 12px;
@@ -107,7 +96,6 @@
   transition: opacity .2s linear;
 }
 
-/* состояние hover */
 .checkbox__label:hover  {
   color: var(--link-hover);
 }
@@ -116,14 +104,12 @@
   border-color: var(--link-hover);
 }
 
-/* состояние focus-visible */
 .checkbox-hidden:focus-visible + .checkbox__label,
 .checkbox-hidden:focus-visible + .checkbox__label > .checkbox-scene {
   border-color: var(--link-hover);
   color: var(--link-hover);
 }
 
-/* состояние active */
 .checkbox-hidden:checked + .checkbox__label,
 .checkbox-hidden:checked + .checkbox__label > .checkbox-scene {
   border-color: var(--link-hover);
@@ -134,16 +120,11 @@
   opacity: 1;
 }
 
-
 /* slider =================================================== */
 .gallery__slider {
   display: flex;
   flex-direction: column;
 }
-
-/* .gallery-slider__img {
-  width: 100%;
-} */
 
 .gallery__swiper {
   margin-right: auto;
@@ -155,13 +136,10 @@
 
 .gallery .swiper-slide {
   position: relative;
-  /* display: grid; */
   justify-content: center;
   cursor: pointer;
 }
 
-/* ====================================================== */
-/* .gallery__link::before { */
 .gallery .swiper-slide::before {
   content: '';
   position: absolute;
@@ -170,15 +148,13 @@
   bottom: 25px;
   left: 25px;
   background: rgba(0, 0, 0, .5);
-  background-image: url('/img/gallery/gallery_zoom.svg');
+  background-image: url('../img/gallery/gallery_zoom.svg');
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0;
   transition: opacity 0.3s ease-in;
-  /* z-index: 1; */
 }
 
-/* .gallery__link::after { */
 .gallery .swiper-slide::after {
   content: '';
   position: absolute;
@@ -191,37 +167,22 @@
   transition: opacity 0.2s ease-in;
 }
 
-/* .gallery__link:hover::before { */
 .gallery .swiper-slide:hover::before {
   opacity: 1;
 }
 
-/* .gallery .swiper-slide:hover {
-  opacity: 1;
-  outline: 3px solid var(--purp-active);
-  outline-offset: -3px;
-} */
-
-/* .gallery__link:focus-visible { */
 .gallery .swiper-slide:focus-visible {
   outline: 3px solid var(--purp-active);
-
 }
 
-/* .gallery__link:active { */
 .gallery .swiper-slide:active {
   outline: 2px solid var(--purp-accordion);
   outline-offset: -2px;
 }
 
-
-/* .gallery__link:active::after { */
 .gallery .swiper-slide:active::after {
   opacity: 1;
 }
-/* ====================================================== */
-
-
 
 /* контейнер навигации слайдера ==========================  */
 .gallery__nav {
@@ -232,7 +193,6 @@
   width: 132px;
 }
 
-/* кнопки ======================================  */
 .gallery__button-next, .gallery__button-prev {
   top: 0;
   margin-top: 0;
@@ -285,9 +245,7 @@
 .swiper-pagination-fraction {
   bottom: auto;
   width: 51px;
-
 }
-
 
 /* ссылка на картине галереи ===================== */
 .gallery__link {
@@ -299,30 +257,21 @@
   transition-duration: .2s;
 }
 
-
 /* модальное окно =================================== */
-
 .gallery-modal {
-
-  /* padding-top: 1000px; */
-  /* padding-bottom: 1000px; */
   position: fixed;
-  /* overflow-y: scroll; */
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: rgba(0,0,0,0.6);
   z-index: 100;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   visibility: hidden;
   opacity: 0;
 }
-
 
 .modal-active {
   visibility: visible;
@@ -330,7 +279,6 @@
   transform: none;
   transition: opacity .4s ease-out;
 }
-
 
 .gallery-modal__wrapper {
   padding: 50px 0;
@@ -340,15 +288,11 @@
   background-color: transparent;
 }
 
-
-
 .gallery-modal__content {
   margin: 0 auto;
-  /* margin-bottom: 1; */
   display: flex;
   flex-direction: column;
   position: relative;
-  /* margin-bottom: 0; */
   max-width: 500px;
   transform: scale(0);
   box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.8);
@@ -399,10 +343,6 @@
   line-height: 16px;
   color: #969696;
 }
-
-/* .gallery-modal__text {
-  line-height: 22px;
-} */
 
 /* кнопка закрытия модального окна =========================================== */
 .gallery-modal__close-btn {

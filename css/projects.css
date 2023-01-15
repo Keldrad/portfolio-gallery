@@ -56,7 +56,6 @@
   background-color: var(--purp-active);
 }
 
-
 /* projects slider ============================================================= */
 .projects__slider {
   position: relative;
@@ -67,7 +66,6 @@
   margin: 0 auto;
   width: 195px;
 }
-
 
 /* ссылки слайдера =================================================== */
 .projects__links {
@@ -103,90 +101,90 @@
 }
 
 .projects__partners_slide1 {
-  background-image: url('/img/projects/partn1.png');
+  background-image: url('../img/projects/partn1.png');
   background-size: 57%;
 }
 
 .projects__partners_slide2 {
-  background-image: url('/img/projects/partn2.png');
+  background-image: url('../img/projects/partn2.png');
   background-size: 70%;
 }
 
 .projects__partners_slide3 {
-  background-image: url('/img/projects/partn3.png');
+  background-image: url('../img/projects/partn3.png');
   background-size: 60%;
 }
 
 .projects__partners_slide4 {
-  background-image: url('/img/projects/partn4.png');
+  background-image: url('../img/projects/partn4.png');
   background-size: 27%;
 }
 
 .projects__partners_slide5 {
-  background-image: url('/img/projects/partn5.png');
+  background-image: url('../img/projects/partn5.png');
   background-size: 40%;
 }
 
 .projects__partners_slide6 {
-  background-image: url('/img/projects/partn6.png');
+  background-image: url('../img/projects/partn6.png');
   background-size: 50%;
 }
 
 .projects__partners_slide7 {
-  background-image: url('/img/projects/partn7.png');
+  background-image: url('../img/projects/partn7.png');
   background-size: 60%;
 }
 
 .projects__partners_slide8 {
-  background-image: url('/img/projects/partn8.png');
+  background-image: url('../img/projects/partn8.png');
   background-size: 40%;
 }
 
 .projects__partners_slide9 {
-  background-image: url('/img/projects/partn9.png');
+  background-image: url('../img/projects/partn9.png');
   background-size: 60%;
 }
 
-  /* кнопки навигации слайдера =================================================== */
-  .projects__swiper-button-prev,
-  .projects__swiper-button-next {
-    position: absolute;
-    top: calc(50% - 15px);
-    margin-top: 0;
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    color: black;
-    background-color: #ECECEC;
-    transition-property: border, background-color;
-    transition-timing-function: linear;
-    transition-duration: .2s;
-    cursor: pointer;
-    z-index: 0;
-  }
+/* кнопки навигации слайдера =================================================== */
+.projects__swiper-button-prev,
+.projects__swiper-button-next {
+  position: absolute;
+  top: calc(50% - 15px);
+  margin-top: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  color: black;
+  background-color: #ECECEC;
+  transition-property: border, background-color;
+  transition-timing-function: linear;
+  transition-duration: .2s;
+  cursor: pointer;
+  z-index: 0;
+}
 
-  .projects__swiper-button-prev {
-    left: 0;
-  }
+.projects__swiper-button-prev {
+  left: 0;
+}
 
-  .projects__swiper-button-next {
-    right: 0;
-  }
+.projects__swiper-button-next {
+  right: 0;
+}
 
-  .projects__swiper-button-prev:after, .projects__swiper-button-next:after {
-    font-size: 12px;
-  }
+.projects__swiper-button-prev:after, .projects__swiper-button-next:after {
+  font-size: 12px;
+}
 
-  .projects__swiper-button-next:hover,
-  .projects__swiper-button-prev:hover,
-  .projects__swiper-button-next:active,
-  .projects__swiper-button-prev:active {
-    background-color: var(--purp-hover);
-  }
+.projects__swiper-button-next:hover,
+.projects__swiper-button-prev:hover,
+.projects__swiper-button-next:active,
+.projects__swiper-button-prev:active {
+  background-color: var(--purp-hover);
+}
 
-  .projects__swiper-button-next:focus-visible,
-  .projects__swiper-button-prev:focus-visible,
-  .projects__swiper-button-next:active,
-  .projects__swiper-button-prev:active {
-    border:  2px solid var(--purp-main);
-  }
+.projects__swiper-button-next:focus-visible,
+.projects__swiper-button-prev:focus-visible,
+.projects__swiper-button-next:active,
+.projects__swiper-button-prev:active {
+  border:  2px solid var(--purp-main);
+}

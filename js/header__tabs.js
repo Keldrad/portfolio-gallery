@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function(){
 // выбор всех объектов с классом кнопки и ожидание события клик
   document.querySelectorAll('.header-down__btn').forEach(function(openMenuItem) {
@@ -11,15 +10,12 @@ document.addEventListener('DOMContentLoaded', function(){
       })
       event.currentTarget.classList.add('header-down__btn_open')
 
-
 // замена карточки стилей на активный
       document.querySelectorAll('.dropdown').forEach(function(headerDropdown) {
         headerDropdown.classList.remove('dropdown_visible')
       })
       document.querySelector(`[data-artstyle="${path}"]`).classList.add('dropdown_visible')
-
     })
-
   })
 
 // закрывание меню при клике в другой области
@@ -34,6 +30,4 @@ document.addEventListener('DOMContentLoaded', function(){
       });
     }
   })
-
 })
-

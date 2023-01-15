@@ -18,11 +18,8 @@
 
 /* текст заголовка аккордиона */
 .accordion__title {
-  /* font-weight: 600; */
   font-size: inherit;
   letter-spacing: 1px;
-  /* line-height: 32px; */
-  /* color: var(--text); */
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
@@ -35,8 +32,6 @@
   font-size: 18px;
   line-height: 32px;
   color: var(--text);
-  /* font-weight: normal; */
-  /* color: #454545; */
 }
 
 /* скругление бордеров header'а аккордеона */
@@ -45,7 +40,6 @@
 }
 
 /* блок контента аккордеона */
-
 .ui-accordion .ui-accordion-content {
   padding: 20px 0 20px;
 }
@@ -56,7 +50,6 @@
   transform-origin: top;
   transition-duration: .3s;
   transition-timing-function: ease-in-out;
-
 }
 
 .ui-widget-content {
@@ -71,7 +64,6 @@
 }
 
 /* hover эффект */
-
 .ui-state-hover {
   border-color: var(--purp-main);
   color: var(--purp-main);
@@ -113,7 +105,6 @@
   transition-timing-function: ease-in-out;
 }
 
-
 /* анимация иконки */
 /* анимация самой картинки и войств картинки (цвета её элементов) */
 .ui-state-default svg,
@@ -126,7 +117,6 @@
 
 /* активное состояние */
 .ui-state-active svg {
-  /* transition-property: transform; */
   transform: rotate(180deg);
 }
 

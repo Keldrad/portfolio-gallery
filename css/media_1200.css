@@ -1,635 +1,575 @@
 @media (min-width: 1200px) {
-
-/* glob ============================================================================================================== */
-:root {
-  --padding: 160px;
-  /* --projects-cards-height: 151px; */
-}
-
-.container {
-  width: 83.4%;
-}
-
-
-/* header ============================================================================================================== */
-.header__logo svg {
-  width: 173.6px;
-}
-
-.header__burger {
-  display: none;
-}
-
-.header__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header-navigation {
-  position: static;
-  padding: 0 0;
-  width: 78.1%;
-  min-height: 100px;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  opacity: 1;
-  transform: none;
-  overflow: visible;
-}
-
-.header-navigation__list {
-  display: flex;
-  justify-content: space-between;
-  /* align-items: center; */
-  max-width: 759px;
-  padding-bottom: 0;
-}
-
-.header-navigation__item {
-  font-size: 18px;
-  line-height: 25px;
-}
-
-.header__enter-button {
-  /* justify-content: flex-end; */
-  margin-left: 30px;
-  padding: 0;
-  width: 74px;
-  /* height: 29px; */
-  min-height: 29px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 25px;
-  /* border-radius: 0; */
-  border-color: transparent;
-}
-
-.header__search {
-  padding-bottom: 0;
-  display: inline-block;
-  top: auto;
-  bottom: -23px;
-  right: -73px;
-  width: 293px;
-  height: 0px;
-  background-color: transparent;
-  z-index: 10;
-  transform: none;
-}
-
-.header__search-input {
-  display: inline-block;
-  z-index: 10;
-}
-
-.header__search-input::placeholder {
-  font-size: inherit;
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.header__search-btn {
-  right: 231px;
-  top: auto;
-  bottom: -53px;
-}
-
-.header__search-close-btn {
-  display: none;
-}
-
-.header__search-btn svg {
-  width: 22px;
-  height: 22px;
-}
-
-/* .header__search-btn {
-  display: none;
-} */
-
-
-/* header-down ==================================================== */
-
-.header-down {
-  display: flex;
-  background: rgba(0, 0, 0, 0.4);
-  /* align-items: center; */
-  /* min-height: 70px; */
-  /* overflow: visible; */
-}
-
-.header-down__menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-width: 720px;
-  width: 64.54%;
-  height: 70px;
-}
-
-
-/* header down buttons =========================================== */
-.header-down__btn {
-  position: relative;
-  padding-right: 12px;
-  border: none;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 25px;
-  outline: none;
-  color: var(--text-alt);
-  transition-property: color, background-color;
-  transition-duration: .3s;
-  transition-timing-function: ease-in-out;
-  z-index: 0;
-}
-
-.header-down__btn::after {
-  content: '';
-  position: absolute;
-  top: 37%;
-  right: 0;
-  width: 7px;
-  height: 7px;
-  border-bottom: 1px solid var(--text-alt);
-  border-left: 1px solid var(--text-alt);
-  transform: rotate(-45deg);
-  transition-property: transform, border-color, background-color;
-  transition-duration: .3s;
-  transition-timing-function: ease-in-out;
-}
-
-
-/* открытое и активное  состояние */
-.header-down__btn:active,
-.header-down__btn_open {
-  color: var(--purp-active);
-}
-
-.header-down__btn:active:not(:focus-visible)::after {
-  border-color: var(--purp-active);
-}
-
-.header-down__btn_open:not(:focus-visible)::after {
-  border-color: var(--purp-active);
-}
-
-.header-down__btn_open::after {
-  transform: rotate(135deg) translateY(-2px) translateX(2px);
-}
-
-/* наведение перенесено ниже, для приоритета над открытым состоянием кнопки */
-.header-down__btn:hover,
-.header-down__btn:hover:not(:focus-visible)::after {
-  border-color: var(--purp-main);
-}
-
-
-
-/* dropdown menu =============================================================  */
-.dropdown {
-  padding: 40px 19px 40px 40px;
-  width: 300px;
-  height: 300px;
-  background-color: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  top: 70px;
-  transition: visibility 0s, opacity .25s ease-in, transform .25s ease-in ;
-  opacity: 0.3;
-  visibility: hidden;
-  transform:  scale(0);
-  transform-origin: 10% top;
-  transition-duration: .25s;
-  transition-delay: .1s;
-  transition-timing-function: ease-out;
-}
-
-.dropdown_visible {
-  transition: transform .25s ease-in .1s, opacity .25s ease-in .1s, visibility 0s;
-  visibility: visible;
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* отступ контента от скролла прижатого к правому краю враппера */
-.dropdown__list {
-  width: 100%;
-  height: 100%;
-  padding-right: 21px;
-}
-
-.dropdown__item:not(:last-child) {
-  height: 40px;
-}
-
-.dropdown__item:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-.dropdown__link {
-  position: relative;
-  padding: 10px 14px;
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 19px;
-  color: var(--text-alt);
-  outline-offset: -2px;
-  outline: transparent;
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition-property: outline, background-color;
-  transition-duration: .2s;
-  transition-timing-function: linear;
-}
-
-.dropdown__link:hover,
-.dropdown__link:focus {
-
-  outline: 2px solid var(--purp-main);
-}
-
-.dropdown__link:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(194, 131, 243, 0.4);
-  opacity: 0;
-  transition-property: opacity;
-  transition-duration: .2s;
-  transition-timing-function: linear;
-}
-
-.dropdown__link:active::before {
-  opacity: 1;
-}
-
-/* scroll ===================================================================== */
-.simplebar-content-wrapper {
-  overflow: auto;
-}
-
-/* выравнивание верхи и низа ползунка и его прозрачности */
-.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
-  top: 0px;
-  bottom: 0px;
-  opacity: 1;
-}
-
-/* ширина и цвет трека */
-.simplebar-track.simplebar-vertical {
-  background-color: black;
-  width: 2px;
-}
-
-/* стиль ползунка */
-.simplebar-scrollbar:before {
-  background: var(--text-alt);
-  border-radius: 0;
-  left: 0px;
-  right: 0px;
-}
-
-
-/* бэкграунды дропдаунов ===================================================== */
-.tintoretto {
-  background-image: url('/img/header/dropdown/realizm/tintoretto.jpg');
-}
-
-.fridrih {
-  background-image: url('/img/header/dropdown/realizm/fridrih.jpg');
-}
-
-.leonardo {
-  background-image: url('/img/header/dropdown/realizm/leonardo.jpg');
-}
-
-.verrocchio {
-  background-image: url('/img/header/dropdown/realizm/verrocchio.jpg');
-}
-
-/* ============================= */
-.mone {
-  background-image: url('/img/header/dropdown/impressionism/mone.jpg');
-}
-
-.sisley {
-  background-image: url('/img/header/dropdown/impressionism/sisley.jpg');
-}
-
-.mane {
-  background-image: url('/img/header/dropdown/impressionism/mane.jpg');
-}
-
-.renuar {
-  background-image: url('/img/header/dropdown/impressionism/renuar.jpg');
-}
-
-/* ============================= */
-.vangog {
-  background-image: url('/img/header/dropdown/postimpressionism/vangog.jpg');
-}
-
-.sezann {
-  background-image: url('/img/header/dropdown/postimpressionism/sezann.jpg');
-}
-
-.gogen {
-  background-image: url('/img/header/dropdown/postimpressionism/gogen.jpg');
-}
-
-.siora {
-  background-image: url('/img/header/dropdown/postimpressionism/siora.jpg');
-}
-
-/* ============================= */
-.kadinskiy {
-  background-image: url('/img/header/dropdown/avangard/kadinskiy.jpg');
-}
-
-.marinetti {
-  background-image: url('/img/header/dropdown/avangard/marinetti.jpg');
-}
-
-.malevich {
-  background-image: url('/img/header/dropdown/avangard/malevich.jpg');
-}
-
-.picasso {
-  background-image: url('/img/header/dropdown/avangard/picasso.jpg');
-}
-
-/* ============================= */
-.karra {
-  background-image: url('/img/header/dropdown/futurism/karra.jpg');
-}
-
-.pratella {
-  background-image: url('/img/header/dropdown/futurism/pratella.jpg');
-}
-
-.severini {
-  background-image: url('/img/header/dropdown/futurism/severini.jpg');
-}
-
-.balla {
-  background-image: url('/img/header/dropdown/futurism/balla.jpg');
-}
-
-
-/* hero ============================================================================================================== */
-.hero {
-  min-height: 800px;
-}
-
-.hero__content {
-  padding-top: 239px;
-  padding-bottom: 284px;
-}
-
-.swiper-slide_slide1 {
-  background-image: url('/img/banner/1920/birmingham-museums-trust-1.jpg');
-}
-
-.swiper-slide_slide2 {
-  background-image: url('/img/banner/1920/birmingham-museums-trust-2.jpg');
-}
-
-.swiper-slide_slide3 {
-  background-image: url('/img/banner/1920/birmingham-museums-trust-3.jpg');
-}
-
-.hero__title {
-  margin-bottom: 17px;
-  max-width: 597px;
-}
-
-.hero__text {
-  max-width: 579px;
-}
-
-.hero__btn {
-  bottom: 122px;
-}
-
-
-/* about ============================================================================================================== */
-.about-us__text {
-  max-width: 1080px;
-}
-
-
-/* gallery ============================================================================================================== */
-.gallery {
-  background-image: url('/img/gallery/1920/birmingham-museums-trust-4.jpg');
-}
-
-.gallery__content {
-  justify-content: space-between;
-  min-height: 595px;
-}
-
-/* filter =================================================== */
-.gallery-filter {
-  width: 25%;
-  margin-right: 50px;
-  margin-bottom: 0;
-  /* min-width: 400px; */
-  height: 435px;
-}
-
-.choices {
-  width: 100%;
-  max-width: 500px;
-}
-
-/* select ========================================  */
-.choices__list--dropdown, .choices__list[aria-expanded] {
-  background-color: transparent;
-}
-
-/* modal ================================================ */
-.gallery-modal__content {
-  max-width: 900px;
-  max-height: 500px;
-}
-
-.gallery-modal__content-descr {
-  padding: 116px 50px;
-}
-
-.gallery-modal__content-img {
-  width: 43.8%;
-}
-
-
-/* catalog ============================================================================================================== */
-.catalog__descr {
-  width: 69%;
-  margin-bottom: 39px;
-}
-
-.accordion-plug__img {
-  margin-right: 36px;
-  margin-left: 14px;
-  width: 31.3%;
-  outline-offset: 12px;
-}
-
-.accordion-plug__title {
-  margin-bottom: 5px;
-  font-size: 24px;
-  line-height: 32px;
-}
-
-.accordion-plug__descr {
-  max-width: 34.3%;
-}
-
-.artist {
-  width: 46.9%;
-}
-
-.artist__life-period {
-  margin-bottom: 5px;
-}
-
-
-.accordion {
-  width: 50%;
-}
-
-
-
-/* events ============================================================================================================== */
-.events__pagination {
-  display: none;
-}
-
-/* стрелки */
-.events__swiper-button-prev, .events__swiper-button-next {
-  display: flex;
-}
-
-.events__swiper-button-prev, .events__swiper-button-next {
-  position: absolute;
-  top: calc(50% - 25px);
-  margin-top: 0;
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  color: black;
-  background-color: #ECECEC;
-  transition-property: border, background-color;
-  transition-timing-function: linear;
-  transition-duration: .2s;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.events__swiper-button-prev {
-  left: -25px;
-}
-
-.events__swiper-button-next {
-  right: -25px;
-}
-
-.events__swiper .swiper-button-disabled {
-  opacity: 1;
-  background-color: #ECECEC;
-  color: #BBBBBB;
-}
-
-
-.events__swiper-button-prev:after, .events__swiper-button-next:after {
-  font-size: 20px;
-}
-
-.events__swiper-button-prev:hover,
-.events__swiper-button-prev:active,
-.events__swiper-button-next:hover,
-.events__swiper-button-next:active {
-  background-color: var(--purp-hover);
-}
-
-.events__swiper-button-prev:focus-visible,
-.events__swiper-button-prev:active,
-.events__swiper-button-next:focus-visible,
-.events__swiper-button-next:active {
-  border:  2px solid var(--purp-main);
-}
-
-
-
-/* projects ============================================================================================================== */
-.projects__container {
-  margin-bottom: 78px;
-}
-
-.projects__slider {
-  width: 90.7%;
-}
-
-.projects__partners {
-  height: 148px;
-}
-
-
-/* tooltip */
-/* уголок контейнера */
-.tooltip__container:after {
-  content: '';
-  position: absolute;
-  bottom: -14px;
-  left: calc(50% - 8px);
-  width: 0;
-  height: 0;
-  border-top: 8px;
-  border-bottom: 8px;
-  border-left: 8px;
-  border-right: 8px;
-  border-style: solid;
-  border-color: var(--purp-main) transparent transparent;
-}
-
-.projects__partners_slide1 {
-  background-size : 54%;
-}
-
-.projects__partners_slide2 {
-  background-size: 73%;
-}
-
-.projects__partners_slide3 {
-  background-size: 51%;
-}
-
-
-/* contacts ============================================================================================================== */
-
-/* элементы управления карты */
-[class*="controls__control"] {
-  display: inline;
-}
-
-
-
-/* footer ============================================================================================================== */
-.social {
-  width: 175px;
-}
-
-.social svg{
-  width: 45px;
-  height: 45px;
-}
-
-
+  /* glob ============================================================================================================== */
+  :root {
+    --padding: 160px;
+  }
+
+  html {
+    scroll-padding-top: 170px;
+  }
+
+  .container {
+    width: 83.4%;
+    max-width: 2000px;
+  }
+
+  /* header ============================================================================================================== */
+  .header__logo svg {
+    width: 173.6px;
+  }
+
+  .header__burger {
+    display: none;
+  }
+
+  .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-navigation {
+    position: static;
+    padding: 0 0;
+    width: 78.1%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    opacity: 1;
+    transform: none;
+    overflow: visible;
+  }
+
+  .header-navigation__list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 759px;
+    padding-bottom: 0;
+  }
+
+  .header-navigation__item {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .header__enter-button {
+    margin-left: 30px;
+    padding: 0;
+    width: 74px;
+    min-height: 29px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    border-color: transparent;
+  }
+
+  .header__search {
+    padding-bottom: 0;
+    display: inline-block;
+    top: auto;
+    bottom: -23px;
+    right: -73px;
+    width: 293px;
+    height: 0px;
+    background-color: transparent;
+    z-index: 10;
+    transform: none;
+  }
+
+  .header__search-input {
+    display: inline-block;
+    z-index: 10;
+  }
+
+  .header__search-input::placeholder {
+    font-size: inherit;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .header__search-btn {
+    right: 231px;
+    top: auto;
+    bottom: -53px;
+  }
+
+  .header__search-close-btn {
+    display: none;
+  }
+
+  .header__search-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* header-down ==================================================== */
+  .header-down {
+    display: flex;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .header-down__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 720px;
+    width: 64.54%;
+    height: 70px;
+  }
+
+  /* header down buttons =========================================== */
+  .header-down__btn {
+    position: relative;
+    padding-right: 12px;
+    border: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    outline: none;
+    color: var(--text-alt);
+    transition-property: color, background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+    z-index: 0;
+  }
+
+  .header-down__btn::after {
+    content: '';
+    position: absolute;
+    top: 37%;
+    right: 0;
+    width: 7px;
+    height: 7px;
+    border-bottom: 1px solid var(--text-alt);
+    border-left: 1px solid var(--text-alt);
+    transform: rotate(-45deg);
+    transition-property: transform, border-color, background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+  }
+
+  /* открытое и активное  состояние */
+  .header-down__btn:active,
+  .header-down__btn_open {
+    color: var(--purp-active);
+  }
+
+  .header-down__btn:active:not(:focus-visible)::after {
+    border-color: var(--purp-active);
+  }
+
+  .header-down__btn_open:not(:focus-visible)::after {
+    border-color: var(--purp-active);
+  }
+
+  .header-down__btn_open::after {
+    transform: rotate(135deg) translateY(-2px) translateX(2px);
+  }
+
+  .header-down__btn:hover,
+  .header-down__btn:hover:not(:focus-visible)::after {
+    border-color: var(--purp-main);
+  }
+
+  /* dropdown menu =============================================================  */
+  .dropdown {
+    padding: 40px 19px 40px 40px;
+    width: 300px;
+    max-height: 300px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 70px;
+    transition: visibility 0s, opacity .25s ease-in, transform .25s ease-in ;
+    opacity: 0.3;
+    visibility: hidden;
+    transform:  scale(0);
+    transform-origin: 10% top;
+    transition-duration: .25s;
+    transition-delay: .1s;
+    transition-timing-function: ease-out;
+  }
+
+  .dropdown_visible {
+    transition: transform .25s ease-in .1s, opacity .25s ease-in .1s, visibility 0s;
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .dropdown__list {
+    width: 100%;
+    max-height: 220px;
+    padding-right: 21px;
+  }
+
+  .dropdown__item:not(:last-child) {
+    height: 40px;
+  }
+
+  .dropdown__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .dropdown__link {
+    position: relative;
+    padding: 10px 14px;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--text-alt);
+    outline-offset: -2px;
+    outline: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition-property: outline, background-color;
+    transition-duration: .2s;
+    transition-timing-function: linear;
+  }
+
+  .dropdown__link:hover,
+  .dropdown__link:focus {
+    outline: 2px solid var(--purp-main);
+  }
+
+  .dropdown__link:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(194, 131, 243, 0.4);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .2s;
+    transition-timing-function: linear;
+  }
+
+  .dropdown__link:active::before {
+    opacity: 1;
+  }
+
+  /* scroll ===================================================================== */
+  .simplebar-content-wrapper {
+    overflow: auto;
+  }
+
+  /* выравнивание верхи и низа ползунка и его прозрачности */
+  .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+    top: 0px;
+    bottom: 0px;
+    opacity: 1;
+  }
+
+  /* ширина и цвет трека */
+  .simplebar-track.simplebar-vertical {
+    background-color: black;
+    width: 2px;
+  }
+
+  /* стиль ползунка */
+  .simplebar-scrollbar:before {
+    background: var(--text-alt);
+    border-radius: 0;
+    left: 0px;
+    right: 0px;
+  }
+
+  .tintoretto {
+    background-image: url('../img/header/dropdown/realizm/tintoretto.jpg');
+  }
+
+  .fridrih {
+    background-image: url('../img/header/dropdown/realizm/fridrih.jpg');
+  }
+
+  .leonardo {
+    background-image: url('../img/header/dropdown/realizm/leonardo.jpg');
+  }
+
+  .verrocchio {
+    background-image: url('../img/header/dropdown/realizm/verrocchio.jpg');
+  }
+
+  .mone {
+    background-image: url('../img/header/dropdown/impressionism/mone.jpg');
+  }
+
+  .sisley {
+    background-image: url('../img/header/dropdown/impressionism/sisley.jpg');
+  }
+
+  .mane {
+    background-image: url('../img/header/dropdown/impressionism/mane.jpg');
+  }
+
+  .renuar {
+    background-image: url('../img/header/dropdown/impressionism/renuar.jpg');
+  }
+
+  .vangog {
+    background-image: url('../img/header/dropdown/postimpressionism/vangog.jpg');
+  }
+
+  .sezann {
+    background-image: url('../img/header/dropdown/postimpressionism/sezann.jpg');
+  }
+
+  .gogen {
+    background-image: url('../img/header/dropdown/postimpressionism/gogen.jpg');
+  }
+
+  .siora {
+    background-image: url('../img/header/dropdown/postimpressionism/siora.jpg');
+  }
+
+  .kadinskiy {
+    background-image: url('../img/header/dropdown/avangard/kadinskiy.jpg');
+  }
+
+  .marinetti {
+    background-image: url('../img/header/dropdown/avangard/marinetti.jpg');
+  }
+
+  .malevich {
+    background-image: url('../img/header/dropdown/avangard/malevich.jpg');
+  }
+
+  .picasso {
+    background-image: url('../img/header/dropdown/avangard/picasso.jpg');
+  }
+
+  .karra {
+    background-image: url('../img/header/dropdown/futurism/karra.jpg');
+  }
+
+  .pratella {
+    background-image: url('../img/header/dropdown/futurism/pratella.jpg');
+  }
+
+  .severini {
+    background-image: url('../img/header/dropdown/futurism/severini.jpg');
+  }
+
+  .balla {
+    background-image: url('../img/header/dropdown/futurism/balla.jpg');
+  }
+
+  /* hero ============================================================================================================== */
+  .hero {
+    min-height: 800px;
+  }
+
+  .hero__content {
+    padding-top: 239px;
+    padding-bottom: 284px;
+  }
+
+  .swiper-slide_slide1 {
+    background-image: url('../img/banner/1920/birmingham-museums-trust-1.jpg');
+  }
+
+  .swiper-slide_slide2 {
+    background-image: url('../img/banner/1920/birmingham-museums-trust-2.jpg');
+  }
+
+  .swiper-slide_slide3 {
+    background-image: url('../img/banner/1920/birmingham-museums-trust-3.jpg');
+  }
+
+  .hero__title {
+    margin-bottom: 17px;
+    max-width: 597px;
+  }
+
+  .hero__text {
+    max-width: 579px;
+  }
+
+  .hero__btn {
+    bottom: 122px;
+  }
+
+  /* about ============================================================================================================== */
+  .about-us__text {
+    max-width: 1080px;
+  }
+
+  /* gallery ============================================================================================================== */
+  .gallery {
+    background-image: url('../img/gallery/1920/birmingham-museums-trust-4.jpg');
+  }
+
+  .gallery__content {
+    justify-content: space-between;
+    min-height: 595px;
+  }
+
+  /* filter =================================================== */
+  .gallery-filter {
+    width: 25%;
+    margin-right: 50px;
+    margin-bottom: 0;
+    height: 435px;
+  }
+
+  .choices {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  /* select ========================================  */
+  .choices__list--dropdown, .choices__list[aria-expanded] {
+    background-color: transparent;
+  }
+
+  /* modal ================================================ */
+  .gallery-modal__content {
+    max-width: 900px;
+    max-height: 500px;
+  }
+
+  .gallery-modal__content-descr {
+    padding: 116px 50px;
+  }
+
+  .gallery-modal__content-img {
+    width: 43.8%;
+  }
+
+  /* catalog ============================================================================================================== */
+  .catalog__descr {
+    width: 69%;
+    margin-bottom: 39px;
+  }
+
+  .accordion-plug__img {
+    margin-right: 36px;
+    margin-left: 14px;
+    width: 31.3%;
+    outline-offset: 12px;
+  }
+
+  .accordion-plug__title {
+    margin-bottom: 5px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .accordion-plug__descr {
+    max-width: 34.3%;
+  }
+
+  .artist {
+    width: 46.9%;
+  }
+
+  .artist__life-period {
+    margin-bottom: 5px;
+  }
+
+
+  .accordion {
+    width: 50%;
+  }
+
+  /* events ============================================================================================================== */
+  .events__pagination {
+    display: none;
+  }
+
+  .events__swiper-button-prev, .events__swiper-button-next {
+    display: flex;
+  }
+
+  .events__swiper-button-prev, .events__swiper-button-next {
+    position: absolute;
+    top: calc(50% - 25px);
+    margin-top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    color: black;
+    background-color: #ECECEC;
+    transition-property: border, background-color;
+    transition-timing-function: linear;
+    transition-duration: .2s;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .events__swiper-button-prev {
+    left: -25px;
+  }
+
+  .events__swiper-button-next {
+    right: -25px;
+  }
+
+  .events__swiper .swiper-button-disabled {
+    display: none;
+  }
+
+  .events__swiper-button-prev:after, .events__swiper-button-next:after {
+    font-size: 20px;
+  }
+
+  .events__swiper-button-prev:hover,
+  .events__swiper-button-prev:active,
+  .events__swiper-button-next:hover,
+  .events__swiper-button-next:active {
+    background-color: var(--purp-hover);
+  }
+
+  .events__swiper-button-prev:focus-visible,
+  .events__swiper-button-prev:active,
+  .events__swiper-button-next:focus-visible,
+  .events__swiper-button-next:active {
+    border:  2px solid var(--purp-main);
+  }
+
+  /* projects ============================================================================================================== */
+  .projects__container {
+    margin-bottom: 78px;
+  }
+
+  .projects__slider {
+    width: 90.7%;
+  }
+
+  .projects__partners {
+    height: 148px;
+  }
+
+  .projects__partners_slide1 {
+    background-size : 54%;
+  }
+
+  .projects__partners_slide2 {
+    background-size: 73%;
+  }
+
+  .projects__partners_slide3 {
+    background-size: 51%;
+  }
+
+
+  /* contacts ============================================================================================================== */
+  /* элементы управления карты */
+  [class*="controls__control"] {
+    display: inline;
+  }
+
+  /* footer ============================================================================================================== */
+  .social {
+    width: 175px;
+  }
+
+  .social svg{
+    width: 45px;
+    height: 45px;
+  }
 }

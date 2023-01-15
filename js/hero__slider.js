@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function(){
-
   const heroSlider = new Swiper('.hero__slider', {
     loop: true,
     allowTouchMove: false,
@@ -10,5 +9,4 @@ document.addEventListener('DOMContentLoaded', function(){
       disableOnInteraction: false
     },
   });
-
 });

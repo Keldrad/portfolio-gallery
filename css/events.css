@@ -11,10 +11,8 @@
   position: relative;
 }
 
-
 .card {
   max-width: 99.3%;
-  /* max-width: 317px; */
   border: 1px solid #CACACA;
 }
 
@@ -27,23 +25,23 @@
 }
 
 .card__img_1 {
-  background-image: url('/img/events/320/engraving.jpg');
+  background-image: url('../img/events/320/engraving.jpg');
 }
 
 .card__img_2 {
-  background-image: url('/img/events/320/discussion.jpg');
+  background-image: url('../img/events/320/discussion.jpg');
 }
 
 .card__img_3 {
-  background-image: url('/img/events/320/formation.jpg');
+  background-image: url('../img/events/320/formation.jpg');
 }
 
 .card__img_4 {
-  background-image: url('/img/events/320/winsor.jpg');
+  background-image: url('../img/events/320/winsor.jpg');
 }
 
 .card__img_5 {
-  background-image: url('/img/events/320/biennale.jpg');
+  background-image: url('../img/events/320/biennale.jpg');
 }
 
 .card__text {
@@ -144,15 +142,11 @@
   background-color: #666;
 }
 
-
-
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 var(--swiper-pagination-bullet-horizontal-gap,7.5px);
 }
 
 .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-  /* width: 51px; */
-  /* max-width: 140px; */
   margin: 0 auto;
 }
 
