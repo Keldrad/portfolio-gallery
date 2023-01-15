@@ -1,0 +1,103 @@
+.hero {
+  /* display: flex; */
+  position: relative;
+  margin-bottom: 50px;
+  min-height: 355px;
+  overflow: hidden;
+}
+
+
+.hero__slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.swiper-slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.swiper-slide_slide1 {
+  background-image: url('/img/banner/320/birmingham-museums-trust-1.jpg');
+}
+
+.swiper-slide_slide2 {
+  background-image: url('/img/banner/320/birmingham-museums-trust-2.jpg');
+}
+
+.swiper-slide_slide3 {
+  background-image: url('/img/banner/320/birmingham-museums-trust-3.jpg');
+}
+
+.hero__content {
+  margin-bottom: 0;
+  position: relative;
+  /* top: 0; */
+  /* left: 0; */
+  /* right: 0; */
+  /* bottom: 0; */
+  /* height: 100%; */
+  padding: 78px 10px 105px;
+  z-index: 1;
+}
+
+.hero__title {
+  margin-bottom: 13px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 37px;
+  text-align: center;
+  color: var(--text-alt);
+}
+
+.hero__text {
+  margin: 0 auto;
+  max-width: 600px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: var(--text-alt);
+}
+
+.hero__btn {
+  position: absolute;
+  bottom: 24px;
+  left: calc(50% - 100px);
+  width: 200px;
+  height: 40px;
+  padding-left: 3px;
+  border-radius: 100px;
+  background: var(--purp-main);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  /* text-align: center; */
+  color: var(--text-alt);
+  outline: 3px solid transparent;
+  transition-property: outline, background-color, outline-offset;
+  transition-timing-function: linear;
+  transition-duration: .2s;
+  z-index: 3;
+}
+
+.hero__btn:hover {
+  outline: 3px solid var(--purp-accordion);
+  outline-offset: 0;
+}
+
+.hero__btn:focus-visible:not(:active) {
+  outline-offset: 3px;
+  outline: 2px solid var(--link-hover);
+}
+
+.hero__btn:active {
+  background: var(--purp-active);
+  outline: 3px solid var(--purp-accordion);
+  outline-offset: 0;
+}

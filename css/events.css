@@ -1,0 +1,162 @@
+.events__container {
+  margin-bottom: 30px;
+}
+
+.events__slider {
+  overflow: hidden;
+  margin-bottom: 11px;
+}
+
+.events__swiper {
+  position: relative;
+}
+
+
+.card {
+  max-width: 99.3%;
+  /* max-width: 317px; */
+  border: 1px solid #CACACA;
+}
+
+.card__img {
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 100%;
+  min-height: 200px;
+  background-size: cover;
+}
+
+.card__img_1 {
+  background-image: url('/img/events/320/engraving.jpg');
+}
+
+.card__img_2 {
+  background-image: url('/img/events/320/discussion.jpg');
+}
+
+.card__img_3 {
+  background-image: url('/img/events/320/formation.jpg');
+}
+
+.card__img_4 {
+  background-image: url('/img/events/320/winsor.jpg');
+}
+
+.card__img_5 {
+  background-image: url('/img/events/320/biennale.jpg');
+}
+
+.card__text {
+  position: relative;
+  min-height: 364px;
+  padding: 0 18px 100px 22px;
+}
+
+.card__place,
+.card__date {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+  color: #999999;
+}
+
+.card__date {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.card__title {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: #333333;
+}
+
+.card__descr {
+  padding-right: 10px;
+}
+
+.card__link {
+  display: inline-block;
+  padding: 0 6px 6px;
+  position: absolute;
+  bottom: 44px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--purp-main);
+  outline: none;
+  transition-property: color, background-color, border;
+  transition-timing-function: linear;
+  transition-duration: .2s;
+}
+
+.card__link::after {
+  content: '';
+  position: absolute;
+  width: calc(100% - 12px);
+  height: 1px;
+  bottom: 6px;
+  left: 6px;
+  border-bottom: 1px solid var(--purp-main);
+  z-index: 1;
+  transition-property: border-color;
+  transition-timing-function: linear;
+  transition-duration: .2s;
+}
+
+
+.card__link:hover:not(:focus-visible), .card__link:hover:not(:focus-visible)::after{
+  color: var(--purp-active);
+  border-color: var(--purp-active);
+}
+
+.card__link:focus-visible::after {
+  border-color: var(--text-alt)
+}
+
+.card__link:active:not(:focus-visible),
+.card__link:active:not(:focus-visible)::after {
+  color: var(--text);
+  border-color: var(--text);
+}
+
+.card__link::before {
+  bottom: -5px;
+  background-color: var(--purp-main);
+}
+
+
+/* pagination */
+.events__pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  background-color: #CACACA;
+  transition-property: background-color;
+  transition-timing-function: linear;
+  transition-duration: .2s;
+}
+
+.events__pagination .swiper-pagination-bullet-active {
+  background-color: #666;
+}
+
+
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap,7.5px);
+}
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  /* width: 51px; */
+  /* max-width: 140px; */
+  margin: 0 auto;
+}
+
+/* стрелки */
+.events__swiper-button-prev, .events__swiper-button-next {
+  display: none;
+}

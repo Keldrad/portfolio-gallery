@@ -1,0 +1,117 @@
+.choices {
+  max-width: 290px;
+}
+
+/* отступ снизу */
+.choices:last-child {
+  margin-bottom: 30px;
+}
+
+/* внутренний контейнер */
+.choices__inner {
+  min-height: 35px;
+  padding: 0px 13px 5px 11px;
+  border-radius: 6px;
+  border: 1px solid var(--text-alt);
+  background-color: transparent;
+  color: var(--text-alt);
+}
+
+/* внутренний контейнер, если список раскрыт */
+.is-open .choices__inner {
+  border-radius: 6px;
+}
+
+/* внутренний контейнер, если список в фокусе */
+.is-focused .choices__inner,
+.choices__inner:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transition: background-color .25s linear;
+}
+
+/* внутренний контейнер, когда список раскрыт */
+.is-open .choices__inner {
+  background: transparent;
+}
+
+/* выбранный пункт */
+.choices__list--single {
+  padding-top: 2px;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+/* отступ снизу для выбранного пункта */
+.choices[data-type*=select-one] .choices__inner {
+  padding-bottom: 0px;
+}
+
+/* галочка, исходное состояние */
+.choices[data-type*=select-one]::after {
+  margin-top: 0;
+  position: absolute;
+  top: 41%;
+  right: 16px;
+  content: "";
+  height: 8px;
+  width: 8px;
+  border-style: none;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  transform: rotate(-45deg) scale(1);
+  transition: border-color .5s ease-in-out, transform .4s ease-out;
+}
+
+/* галочка, ракрытое состояние */
+.choices[data-type*=select-one].is-open::after {
+  border-color: var(--text-alt);
+  margin-top: 0;
+  transform: rotate(-45deg) scale(-1) translate(4px, -4px);
+  top: 37%;
+}
+
+/* выпадающий список */
+.choices__list--dropdown, .choices__list[aria-expanded] {
+  background-color: rgba(0,0,0,0.9);
+  border: 1px solid #999;
+  border-radius: 6px;
+  overflow: hidden;
+  word-break: break-all;
+  will-change: visibility;
+}
+
+/* пункты выпадающего списка */
+.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 14px 20px;
+  color: #999;
+}
+
+/* подсвеченный пункт выпадающего списка */
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-alt);
+  transition-property: color, background-color;
+  transition: .25s ease-out;
+}
+
+/* анимация появления выпадающего меню */
+.choices__list--dropdown, .choices__list[aria-expanded] {
+  opacity: 0;
+  transform-origin: top;
+  transform: scaleY(0);
+}
+
+.is-active.choices__list--dropdown, .is-active.choices__list[aria-expanded] {
+  opacity: 1;
+  transform: scaleY(1);
+  transition: all .25s ease-out;
+  transition-delay: 200ms;
+}
+
+/*сокрытие выбранного вырианта из списка опций */
+.choices__list .is-selected {
+  display: none;
+}

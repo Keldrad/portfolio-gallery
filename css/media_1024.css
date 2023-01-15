@@ -1,0 +1,299 @@
+/* @media (min-width: 1024px)  */
+@media (min-width: 1024px) {
+
+/* glob ============================================================================================================== */
+
+:root {
+  /* --projects-cards-height: 128px; */
+  --burger-menu-padding-left: 4.9%;
+}
+
+.container {
+  width: 90.4%;
+}
+
+
+
+
+/* header ============================================================================================================== */
+
+.header__search {
+  right: 0;
+  width: 314px;
+}
+
+.header__search-btn_open {
+  right: 285px;
+  left: auto;
+}
+
+
+
+.header-navigation {
+  /* top: -29px; */
+  /* left: -5.3%; */
+  padding-left: 4.4%;
+}
+
+
+@keyframes search {
+  from {right: 0px;}
+  50% {right: 142px;}
+  to {right: 285px;}
+}
+
+@keyframes search-back {
+  from {right: 285px;}
+  50% {right: 142px;}
+  to { right: 0;}
+}
+
+
+/* hero ============================================================================================================== */
+
+
+
+
+/* about ============================================================================================================== */
+
+
+
+
+
+/* gallery ============================================================================================================== */
+.gallery {
+    background-image: url('/img/gallery/1024/birmingham-museums-trust-4.jpg');
+  }
+
+  .gallery__content {
+    min-height: 560px;
+    flex-direction: row;
+    justify-content: left;
+}
+
+
+/* filter =================================================== */
+.gallery-filter {
+  margin-right: calc((100vw - 1024px)/ 3 + 50px);
+  /* margin-right: var(--padding); */
+  min-width: 280px;
+  height: 365px;
+}
+
+
+.choices {
+  width: 100%;
+  max-width: 300px;
+}
+/* slider =================================================== */
+
+/* .gallery__slider {
+  width: 100%;
+} */
+
+.gallery__slider {
+  margin-left: auto;
+  margin-right: auto;
+  place-self: flex-start;
+}
+
+.gallery__swiper {
+  margin-right: auto;
+  margin-left: 0;
+  margin-bottom: 0;
+  max-width: 596px;
+  /* max-width: 610px; */
+}
+
+.gallery__nav {
+  margin-top: 31px;
+  /* margin-left: calc(50% - 297px); */
+  margin-bottom: 21px;
+}
+
+
+
+/* modal ================================================ */
+
+
+.gallery-modal__content {
+  max-width: 594px;
+}
+
+.gallery-modal__content-descr {
+  padding-right: 45px;
+  padding-bottom: 75px;
+}
+
+.gallery-modal__ages {
+  margin-bottom: 31px;
+}
+
+/* catalog ============================================================================================================== */
+.catalog__container {
+  margin-bottom: 81px;
+}
+
+.catalog__content {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.catalog__descr {
+  margin-bottom: 39px;
+}
+
+.accordion {
+  margin-bottom: 0;
+  width: 47.3%;;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.artists-list {
+  max-height: 400px;
+}
+
+.artists-list li {
+  margin-right: 65px;
+}
+
+/* .artists-list__button {
+  letter-spacing: 0;
+} */
+
+/* паддинги accordiona */
+
+.accordion-plug__img {
+  padding: 6px;
+  width: 39.5%;
+}
+
+
+.accordion-plug__descr {
+  max-width: 47.3%;
+  padding: 0;
+}
+
+.artist {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: calc(50% - 25px);
+}
+
+
+/* events ============================================================================================================== */
+
+.card__descr {
+  padding-right: 8px;
+}
+
+.card__img {
+  margin-bottom: 12px;
+}
+
+
+.card__title {
+  margin-bottom: 4.5px;
+}
+
+.card__place, .card__date {
+  padding-right: 12px;
+}
+
+.card__text {
+  padding-left: 35px;
+  padding-right: 22px;
+}
+
+.card__link {
+  bottom: 47px;
+}
+
+
+/* projects ============================================================================================================== */
+.projects__container {
+  margin-bottom: 79px;
+}
+
+.projects-text {
+  margin-bottom: 21px;
+}
+
+.projects-subtitle {
+  margin-bottom: 22px;
+}
+
+.projects__slider {
+  width: 820px;
+}
+
+.projects__partners {
+  height: 126px;
+}
+
+.projects__partners_slide1 {
+  background-size : 55%;
+}
+
+.projects__partners_slide2 {
+  background-size: 75%;
+}
+
+.projects__partners_slide3 {
+  background-size: 70%;
+}
+
+.projects__partners_slide4 {
+  background-size: 32%;
+}
+
+.projects__partners_slide5 {
+  background-size: 40%;
+}
+
+.projects__partners_slide6 {
+  background-size: 55%;
+}
+
+.projects__partners_slide7 {
+  background-size: 65%;
+}
+
+.projects__partners_slide8 {
+  background-size: 45%;
+}
+
+.projects__partners_slide9 {
+  background-size: 70%;
+}
+
+
+/* contacts ============================================================================================================== */
+.form {
+    flex-wrap: nowrap;
+    max-width: 1024px;
+}
+
+.form__item {
+  margin-bottom: 0px;
+}
+
+.input-field-container {
+  display: inline-block;
+  width: 29.2%;
+}
+
+.form__button_large {
+    width: 37%;
+  }
+
+
+
+
+/* footer ============================================================================================================== */
+
+
+}

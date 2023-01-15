@@ -1,0 +1,13 @@
+.map-container {
+  /* width: 100vw; */
+  height: 320px;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+[class*="copyright"],
+[class*="controls__control"] {
+  display: none;
+}

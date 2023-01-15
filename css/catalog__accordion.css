@@ -1,0 +1,137 @@
+.accordion {
+  margin-bottom: 51px;
+}
+
+/* шрифт */
+.ui-widget {
+  font-family: inherit;
+}
+
+/* заголовок аккордеона */
+.ui-accordion .ui-accordion-header {
+  margin-bottom: -1px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 20px 0px 19px;
+}
+
+/* текст заголовка аккордиона */
+.accordion__title {
+  /* font-weight: 600; */
+  font-size: inherit;
+  letter-spacing: 1px;
+  /* line-height: 32px; */
+  /* color: var(--text); */
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+  border: none;
+  border-top: 1px solid #c5c5c5;
+  border-bottom: 1px solid #c5c5c5;
+  outline: none;
+  background: inherit;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--text);
+  /* font-weight: normal; */
+  /* color: #454545; */
+}
+
+/* скругление бордеров header'а аккордеона */
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br, .ui-corner-top {
+  border-radius: 0;
+}
+
+/* блок контента аккордеона */
+
+.ui-accordion .ui-accordion-content {
+  padding: 20px 0 20px;
+}
+
+.ui-accordion-content {
+  transform: scaleY(0);
+  transition-property: transform;
+  transform-origin: top;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+
+}
+
+.ui-widget-content {
+  border: none;
+  border-bottom: 1px solid #dddddd;
+  background: inherit;
+  color: var(--text);
+}
+
+.ui-accordion-content-active {
+  transform: scaleY(1);
+}
+
+/* hover эффект */
+
+.ui-state-hover {
+  border-color: var(--purp-main);
+  color: var(--purp-main);
+}
+
+.ui-state-hover circle, .ui-state-focus circle{
+  stroke: var(--purp-hover);
+  fill: var(--purp-hover);
+}
+
+/* focus эффект */
+.ui-state-focus {
+  color: var(--text-alt);
+}
+
+.ui-state-focus .accordion__title {
+  background-color: var(--purp-main);
+}
+
+/* active эффект */
+.ui-state-active {
+  border-color: var(--purp-active);
+  color: var(--purp-active);
+}
+
+.ui-state-active circle{
+  stroke: var(--purp-main);
+  fill: var(--purp-hover);
+}
+
+.ui-state-active .accordion__title {
+  background-color: inherit;
+}
+
+/* анимация смены состояний */
+.ui-state-default {
+  transition-property: color, border-color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+
+
+/* анимация иконки */
+/* анимация самой картинки и войств картинки (цвета её элементов) */
+.ui-state-default svg,
+.ui-state-default circle,
+.ui-state-default path {
+  transition-property: transform, stroke, fill;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+
+/* активное состояние */
+.ui-state-active svg {
+  /* transition-property: transform; */
+  transform: rotate(180deg);
+}
+
+/* исправление стилей шрифтов кнопок  */
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+  font-family: inherit;
+  font-size: inherit;
+}

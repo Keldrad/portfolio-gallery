@@ -1,0 +1,173 @@
+@media (min-width: 1600px) {
+/* gallery ============================================================================================================== */
+/* slider =================================================== */
+.gallery__slider {
+  max-width: 71.8%;
+}
+
+.gallery__swiper {
+  max-width: 100%;
+  /* max-width: 1150px; */
+}
+
+.gallery__nav {
+  margin-left: 0;
+  margin-bottom: 22px;
+}
+
+
+/* catalog ============================================================================================================== */
+.artists-list {
+  width: 91.3%;
+  max-height: 300px;
+}
+
+.artists-list li {
+  margin-right: 0;
+}
+
+
+/* events ============================================================================================================== */
+.events__container {
+  margin-bottom: 79px;
+}
+
+.card {
+  max-width: 99.6%;
+}
+
+.card__img {
+  margin-bottom: 11px;
+  min-height: 300px;
+}
+
+.card__title {
+  margin-bottom: 7.5px;
+}
+
+.card__title_margin {
+  margin-bottom: 1.5px;
+}
+
+.card__text {
+  min-height: 285px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.card__place,
+.card__date {
+  font-weight: 600;
+  text-align: left;
+}
+
+.card__date {
+  margin-bottom: 13px;
+}
+
+.card__descr {
+  padding-right: 0px;
+}
+
+.card__link {
+  bottom: 42px;
+}
+
+
+/* projects ============================================================================================================== */
+
+.projects__container {
+  margin-bottom: 78px;
+}
+
+.projects-text {
+  width: 70%;
+  max-width: 1080px;
+}
+
+.projects__slider {
+  width: 90.7%;
+}
+
+.projects__partners {
+  height: 148px;
+}
+
+
+/* tooltip */
+/* уголок контейнера */
+.tooltip__container:after {
+  /* display: none; */
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  left: calc(50% - 8px);
+  width: 0;
+  height: 0;
+  border-top: 8px;
+  border-bottom: 8px;
+  border-left: 8px;
+  border-right: 8px;
+  border-style: solid;
+  border-color: var(--purp-main) transparent transparent;
+}
+
+/* кнопка с крестиком */
+/* .tooltip__close-icon {
+  display: none;
+} */
+
+
+.projects__partners_slide1 {
+  background-size : 54%;
+}
+
+.projects__partners_slide2 {
+  background-size: 73%;
+}
+
+.projects__partners_slide3 {
+  background-size: 51%;
+}
+
+
+
+/* contacts ============================================================================================================== */
+.contacts {
+  padding-top: 37px;
+  padding-bottom: 17px;
+  border: 1px solid #CACACA;
+}
+
+.contacts__container {
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  /* align-items: t; */
+}
+
+.contacts__heading {
+  padding-top: 6px;
+}
+
+.contacts__address {
+  margin-bottom: 0px;
+}
+
+.form {
+  padding-top: 14px;
+  margin-bottom: 0;
+  max-width: 909px;
+  width: 57%;
+}
+
+.input-field-container {
+    width: 29.7%;
+}
+
+.form__button_large {
+  width: 36.2%;
+}
+
+}

@@ -1,0 +1,12 @@
+@media (min-width: 577px) {
+  .artists-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 420px;
+  }
+
+  .projects__slider {
+    width: 410px;
+  }
+}

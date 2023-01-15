@@ -1,0 +1,145 @@
+.contacts__container {
+  margin-bottom: 18px;
+}
+
+.contacts__heading {
+  margin-bottom: -2px;  
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--text);
+}
+
+.contacts__address {
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  font-style: normal;
+  color: var(--text);
+}
+
+
+/* form ================================================================================================= */
+.form {
+  margin-bottom: 20px;
+}
+
+.form__item {
+  width: 100%;
+  max-width: 431px;
+  margin-bottom: 20px;
+  padding: 3px 24px;
+  border: 1px solid #333333;
+  border-radius: 100px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: #333333;
+  cursor: pointer;
+  transition-property: background-color, border-color;
+  transition-timing-function: linear;
+  transition-duration: .2s;
+}
+
+.form__item:hover,
+.form__item:focus-visible {
+  background-color: #EAEAEA;
+}
+
+.form__item:active:not(:hover),
+.form__item:active:not(:focus-visible) {
+  background-color: white;
+  border-color: rgba(51, 51, 51, 1);
+}
+
+.input-field-container {
+  position: relative;
+}
+
+.form__button {
+  width: 128px;
+  height: 40px;
+  border: 2px solid var(--purp-main);
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--purp-main);
+  transition-property: outline, border-color, background-color, color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+
+.form__button:hover {
+  background-color: var(--purp-main);
+  color: var(--text-alt);
+}
+
+.form__button:focus-visible {
+  outline: 2px solid var(--purp-hover);
+  outline-offset: 2px;
+}
+
+.form__button:active {
+  border-color: var(--purp-hover);
+  background-color: var(--purp-main);
+  color: var(--text-alt);
+}
+
+.form__button_large {
+  display: none;
+}
+
+/* messengers ================================================================================================= */
+
+.contacts-messengers__text {
+  display: inline-block;
+  margin-bottom: 7px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--text);
+}
+
+.contacts-messengers__icons {
+  margin-bottom: 18px;
+}
+
+.contacts-icons {
+  width: 50px;
+  height: 50px;
+}
+
+.contacts-messengers__links:not(:last-child) {
+  margin-right: 17px;
+}
+
+.is-invalid:not(:focus-visible) {
+  border: 1px solid #D11616;
+}
+
+.contacts-messengers__links {
+  outline: none;
+  transition-property: outline, opacity;
+  transition-timing-function: linear;
+  transition-duration: .2s;
+}
+
+.contacts-messengers__links:hover, 
+.contacts-messengers__links:focus {
+  opacity: 0.5;
+}
+
+.contacts-messengers__links:active{
+  opacity: 1;
+}
+
+.contacts-messengers__links:active> svg{
+  outline: 1px solid #9643A4;
+  border-radius: 100%;
+}
+
+[class*="controls__control"] {
+  display: none;
+}

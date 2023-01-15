@@ -1,0 +1,113 @@
+.catalog__descr {
+  display: none;
+}
+
+
+/* tab */
+.artist__tab {
+  display: none;
+}
+
+.artist__tab_active {
+  display: block;
+}
+
+
+
+/* кнопки табов */
+.artists-list__button {
+  position: relative;
+  padding: 0;
+  outline: none;
+  line-height: 31px;
+  /* letter-spacing: 0.5px; */
+}
+
+.artists-list__button:hover:not(:focus-visible) {
+  color: var(--purp-main);
+  border-bottom: var(--purp-main);
+}
+
+.artists-list__button:focus-visible {
+  color: var(--text-alt);
+  background-color: var(--purp-main);
+}
+
+.artists-list__button:active:not(:focus-visible) {
+  color: var(--purp-active);
+}
+
+.artists-list__button_active {
+  color: var(--purp-active);
+}
+
+
+
+/* карточка художника */
+.artist__img {
+  display: inline-block;
+  margin-bottom: 17px;
+  width: 100%;
+  min-height: 181px;
+}
+
+.artist__name {
+  margin-bottom: 14px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.artist__life-period {
+  margin-bottom: 7px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #999999;
+}
+
+.artist__bio {
+  padding-right: 2px;
+}
+
+
+
+/* карточка заглушка */
+.accordion-plug {
+  display: flex;
+}
+
+.accordion-plug__img {
+  margin-right: 25px;
+  width: 33%;
+  border: 2px solid #B7B7B7;
+  background-clip:content-box ;
+  padding: 6px;
+  background-color: #B7B7B7;
+}
+
+.accordion-plug__descr {
+  width: 60%;
+  padding: 0;
+}
+
+.accordion-plug__title {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  color: #333333;
+}
+
+.accordion-plug__text {
+  line-height: 22px;
+  margin-bottom: 5px;
+}
+
+.link.accordion-plug__link,
+.artist__plug-link {
+  padding: 0;
+  margin: 0;
+  line-height: 22px;
+  color: var(--purp-main);
+}
